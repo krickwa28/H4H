@@ -1,0 +1,46 @@
+from flask import Flask
+from flask import Flask, redirect, url_for
+from flask import Flask, request, render_template
+
+app = Flask(__name__)
+
+global_amount = 0
+
+@app.route('/')
+def hello():
+    return render_template('choice.html')
+
+
+@app.route('/choice/<choice>', methods=['POST', 'GET'])
+def buttons(choice):
+    if request.method == 'POST':
+        if choice == 'Bottles':
+            global_amount += 2
+        elif choice == 'Utensils':
+            global_amount += 1
+        elif choice == 'Bags':
+            global_amount += 3
+        elif choice == 'Containers':
+            global_amount += 2
+        elif choice == 'Other':
+            global_amount +=1
+        return redirect(url_for('data')), render_template('index.html')
+    else:
+        if choice == 'Bottles':
+            global_amount += 2
+        elif choice == 'Utensils':
+            global_amount += 1
+        elif choice == 'Bags':
+            global_amount += 3
+        elif choice == 'Containers':
+            global_amount += 2
+        elif choice == 'Other':
+            global_amount +=1
+        return redirect(url_for('/'),render_template('index.html'))
+
+@app.route('/data')
+def data():
+    return ("toatal amount of plastic used:", global_amount)
+
+if __name__ == '__main__':
+    app.run(debug=True)
