@@ -1,12 +1,12 @@
-<!DOCTYPE html>
-<link rel="stylesheet" type="text/css" href="styles.css">
+ <!DOCTYPE html>
+<link rel="stylesheet" type="text/css" href="front.css">
 <html>
     <h1 className = "title">
         Welcome to PlasTick!
     </h1>
     <div className = "container">
         <input type="text" placeholder="username">
-        <a href="trashscreen.html" className = "button">Login</a>
+        <a href="trashscreen.html" className = "button" onclick="loginScreen()">Login</a>
         <a href="trashscreen.html" className = "button">Register</a>
 
         <body>
@@ -16,6 +16,10 @@
                 statistics and visualizations to help users understand their plastic consumption. 
                 PlasTick also provides tips and suggestions on how to reduce plastic usage and waste.
             </p>
-            <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/design/ZelFlH2EZRjk72iokRRtph/h4h-2025?node-id=0-1&embed-host=share" allowfullscreen></iframe>
-        </body>
+            <script>
+                function loginScreen() {
+                    window.location.href = "login.html";
+                }
+            </script>
+    
 </html>
