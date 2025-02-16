@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1> User Data </h1>
+        <ul>
+            {%for user in users%}
+            <li>ID: {{user.id}}, Name:{{user.name}}, Weight: {{user.weight}}</li>
+            {% end for %}
+        </ul>
+    </body>
+</html>
+    

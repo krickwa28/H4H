@@ -1,33 +1,34 @@
 <!DOCTYPE html>
 <html>
     <head>
-    <link rel="stylesheet" href="home.css">
-        <style>
-            .rectangle {
-                width: 100%;
-                height: 100%;
-                background-color: #99BDC5;
-            }
-            .square{
-                width: 5px;
-                height: 50px;
-                background-color: gray;
-                opacity: 30%;
-                border-radius: 100px;
-            }
-        </style>
     </head>
-    <?php
-        $name = $_GET["username"];
-        echo ("Hello". $name."!");
-    ?>
 
-    <button className = "addplastic">Add Plastic</button>
-    <body>
-        <div class="rectangle"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
+    <div>
+        <?php
+            $Weight: {{weight}};
+            if ($Weight >= 2)
+                $image = "C:\Users\ktric\Downloads\animal.png"
+            else 
+                $image = " "
+        ?>
+    </div>
+
+    <header style="text-align: center; color: white; background-color: #7ea2aa; font-size: 60px; padding: 20px 30px;">
+        Hello user!
+    </header>
+    <h1 style="text-align: center; color: #7ea2aa; font-size: 30px;">
+        Let's help save the world today :)
+    </h1>
+    <body style="background-color: #EEDCC3;">
+        <form action = "recyclingInfo" method = "GET">
+            <button class = "recyclinginfo" style="padding: 20px 30px; font-size: 30px; font-family: 'Trebuchet MS'; background-color: white; color: #99BDC5">Recycling Information</button>
+        </form>
+        <br>
+        <img src= $image>
+        <br>
+    <form action = "addPlastic" method = "GET" >
+        <button class = "addplastic" style="padding: 20px 30px; font-size: 30px; font-family: 'Trebuchet MS'; background-color: white; color: #99BDC5">Add Plastic</button>
+    
     </body>
 
 </html>

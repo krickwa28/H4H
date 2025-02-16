@@ -1,25 +1,27 @@
-<!--templates/front.html-->
 <!DOCTYPE html>
 <html>
-<head>
-    <link rel="stylesheet" href="front.css">
-</head>
-<body>
-    <h1 class = "title">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    </head>
+
+
+    <h1 class = "title", style="color:white; font-size: 50px; font-family: 'Baloo Da 2', sans-serif; text-align: center;">
         Welcome to PlasTick!
     </h1>
-    <div class = "container">
-        <form action = "attempt.py" method ="GET">
-            <input type="text" name="username"/>
-            <input type ="submit" value="LOGIN"/>
-        </form>
-       
+    <body style = "background-color: #7ea2aa;">
+        <div class="container" style="display: flex; justify-content: center; align-items: center; padding: 20px;">
+        <img src="{{url_for('static',filename='Logo.png') }}" alt="Logo" style="height: 510px; width: 660px; position: absolute; right: 30%; top: 45%;"/>
         </div>
-         <p>
-            PlasTick is a web application that allows users to track their plastic usage and waste. 
-            Users can log in and record their plastic usage and waste, and the application will provide 
-            statistics and visualizations to help users understand their plastic consumption. 
-            PlasTick also provides tips and suggestions on how to reduce plastic usage and waste.
+        <div class="container" style="border-radius: 30px; padding: 20px 30px; display: flex; justify-content: center; align-items: center;">
+            <form action="attempt.py" method="GET" style="display: flex; gap: 10px; border-radius: 30px;">
+                <input type="text" name="username" style="font-size: 20px; padding: 10px; border-radius: 30px;"/>
+                <input type="submit" value="LOGIN" style="font-size: 20px; padding: 10px 20px; border-radius: 30px; font-family: 'Baloo Da 2', sans-serif;"/>
+            </form>
+        </div>
+        
+        </div>
+         <p style="font-size: xx-large; font-family: 'Baloo Da 2', sans-serif; color: white; text-align: center;">
+            PlasTick is a website that shares information on the recycling programs in the Bay Area. Log in and record your plastic usage to find out your impact!!!
         </p>
 </body> 
 </html>

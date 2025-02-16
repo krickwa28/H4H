@@ -4,24 +4,23 @@
         <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     </head>
 
+    <div>
+        
+    </div>
+
     <header style="text-align: center; color: white; background-color: #7ea2aa; font-size: 70px; padding: 20px 30px; font-family: 'Baloo Da 2', sans-serif;">
         Hello user!
     </header>
     <h1 style="text-align: center; color: #7ea2aa; font-size: 30px; font-family: 'Baloo Da 2', sans-serif;">
-        Let's help save the world today :) <br></br>
-        Your Total Plastic Consumption is {{ plastic }} </h1>
-    <div>
-        <img src= "{{url_for('static',filename='Untitled_Artwork.png') }}" alt="landfill" style="height: 350px; width: 400px; position: absolute; right: 36.6%;"/>
-    </div>
-
-
+        Let's help save the world today :)
+    </h1>
     <body style="background-color: #EEDCC3;">
         <form action = "recyclingInfo" method = "GET">
             <button class = "recyclinginfo" style="padding: 15px 30px; font-size: 30px; font-family: 'Baloo Da 2', sans-serif; background-color: white; color: #99BDC5; border-radius: 30px; position: absolute; top: 86%; right: 37%;">Recycling Information</button>
         </form>
     <form action = "addPlastic" method = "GET" >
         <button class = "addplastic" style="padding: 20px 30px; font-size: 30px; font-family: 'Baloo Da 2', sans-serif; background-color: white; color: #99BDC5; border-radius: 30px; position: absolute; top: 72%; right: 42%;">Add Plastic</button>
-    </form>
+    
     </body>
 
 </html>
