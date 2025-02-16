@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'Raleway';
+    src: url('fonts/Baloo_Da_2/BalooDa2-VariableFont_wght.ttf');
+}
+h1 {
+    text-align: center;
+    color: white;
+    font-family: 'Raleway'
+    text-shadow: 2px 2px 4px #000000;
+}
+
+body{
+    background-color: #99BDC5;
+    font-family: 'Raleway';
+}
+
