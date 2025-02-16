@@ -1,22 +1,22 @@
 # pip install flask flask-cors firebase-admin
 
+from flask import Flask
 from flask import Flask, request, jsonify
+from flask import Flask, request, render_template
 from flask_cors import CORS
 from firebase_admin import credentials, firestore, initialize_app
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder="templates")
 CORS(app)
 
 cred = credentials.Certificate("key.json")
 initialize_app(cred)
 db = firestore.client()
 
-@app.route("/")
-
-# http://localhost:5000/
-@app.route("/hello")
+@app.route("/", methods = ["GET","POST"])
 def hello_world():
-    return {"message": "Hello, World!"}
+    return render_template("front.html")
+    #return jsonify({"Hello": "name"})
 
 
 # http://localhost:5000/add-numbers?num1=10&num2=20
@@ -50,4 +50,4 @@ def get_document():
 
 
 if __name__ == "__main__":
-    app.run(port=5000, debug=True)
+    app.run(debug=True)
